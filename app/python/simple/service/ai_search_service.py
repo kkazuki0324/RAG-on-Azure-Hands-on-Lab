@@ -22,7 +22,7 @@ def build_search_client(index_name: str):
         およびAPIキーで構成されたSearchClientのインスタンス。
     """
     search_service_name = os.environ.get("AI_SEARCH_SERVICE_NAME")
-    api_key = get_secret_from_key_vault("ai-search-api-key")  # 元々は os.environ.get("AI_SEARCH_API_KEY")
+    api_key = get_secret_from_key_vault("AI_SEARCH_API_KEY")  # 元々は os.environ.get("AI_SEARCH_API_KEY")
     service_endpoint = "https://{0}.search.windows.net/".format(search_service_name)
     return SearchClient(service_endpoint, index_name, AzureKeyCredential(api_key))
 
