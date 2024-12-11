@@ -15,7 +15,7 @@ def set_openai_api_config():
     OpenAI APIの設定を行います。
     """
     openai.api_type = "azure"
-    openai.api_key = os.getenv("AZURE_OPENAI_API_KEY")
+    openai.api_key = get_secret_from_key_vault("azure-openai-api-key")  # 元々は os.environ.get("AZURE_OPENAI_API_KEY")
     openai.azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
     openai.api_version = os.getenv("AZURE_OPENAI_API_VERSION")
 
