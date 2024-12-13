@@ -1,4 +1,4 @@
 using '../modules/keyvault.bicep'
 
-param keyvaultName = 'kv-cwsfy25q2g0324'  // ChangeMe（末尾の数字を変える）
+param keyvaultName = 'kv-cwsfy25q2gff22'  // ChangeMe（末尾の数字を変える）
 param location = 'westus'
